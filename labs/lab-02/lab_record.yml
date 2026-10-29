@@ -1,22 +1,22 @@
 assignment: lab2
 
 observations:
-  q1: ""
-  q2: ""
+  q1: "conflict"
+  q2: "log_level"
 
 guided_practice:
-  shared_base_sha: ""
-  operations_diff_summary: ""
-  security_diff_summary: ""
-  non_overlapping_changes: ""
+  shared_base_sha: "3d442b84a304403c30036b805dae75f9df8d8164"
+  operations_diff_summary: "changes log_level to warning and enables metrics"
+  security_diff_summary: "changes log_level to error and enables auditing"
+  non_overlapping_changes: "metrics_enabled=true and audit_enabled=true"
 
 debugging:
-  conflict_file: ""
-  conflict_markers_removed: ""
-  resolution_merge_parent_count: ""
+  conflict_file: "labs/lab-02/conflict-exercise/service.conf"
+  conflict_markers_removed: "yes"
+  resolution_merge_parent_count: "2"
 
 independent:
-  reason_code: ""
+  reason_code: "operations-visibility"
   pull_request_number: ""
   readme_branch_name: ""
 
