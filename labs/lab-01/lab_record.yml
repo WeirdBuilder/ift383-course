@@ -1,17 +1,17 @@
 assignment: lab1
 
 observations:
-  q1: ""
-  q2: ""
+  q1: "permission-denied"
+  q2: "copy"
 
 guided_practice:
-  job_seen_in_jobs: ""
-  foreground_process_interrupted: ""
-  vim_search_term_used: ""
+  job_seen_in_jobs: "yes"
+  foreground_process_interrupted: "yes"
+  vim_search_term_used: "max_connections"
 
 debugging:
-  greeting_permission_defect: ""
-  greeting_first_line_defect: ""
+  greeting_permission_defect: "execute permission was missing"
+  greeting_first_line_defect: "shebang named bashh instead of bash"
 
 independent:
   field: ""
