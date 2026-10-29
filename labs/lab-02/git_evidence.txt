@@ -1,0 +1,16 @@
+*   8e098db (HEAD -> main, origin/main, origin/HEAD) Merge pull request #1 from WeirdBuilder/feature/check-readme
+|\  
+| * e4c552b (origin/feature/check-readme, feature/check-readme) Add course check instructions
+|/  
+* 38f4d90 Complete Lab 2 merge exercise
+*   d670dcf Resolve Lab 2 configuration conflict
+|\  
+| * 80c54e4 (lab2/security) lab2 setup: security configuration
+* | 6bad4bc (lab2/operations) lab2 setup: operations configuration
+|/  
+* 3d442b8 Updating Lab 1 files
+* 2353345 Update Lab 2 Git practice file
+* 7d5f341 Add Lab 2 Git practice file
+* 86ebebc Initial commit
+8e098dba3515895da74670a85f8d4828c2da93ef 38f4d90c4ad4a5daf05e19668d680082fac546e5 e4c552bfa3d598b2631112dbed17f9dda7f38846 Merge pull request #1 from WeirdBuilder/feature/check-readme
+d670dcfe8037fd83e2d8634fc26b2eeb27737b81 6bad4bcb314d6768143606ce29e1ff1c1755199a 80c54e47a49b440fec55b44ba630354e9c4c81b6 Resolve Lab 2 configuration conflict
