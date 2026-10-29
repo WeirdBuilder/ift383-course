@@ -84,6 +84,10 @@ During the final project, copy:
 cp workflow-starters/final-project.yml .github/workflows/final-project.yml
 ```
 
+## Running course checks
+
+Run 'python3 tools/submit.py lab2' from the repository root to check the committed Lab 2 work and create the Canvas ZIP.
+
 ## What the receipt means
 
 The ZIP contains the exact Git commit and tree, a verified full-history bundle, check result IDs, artifact hashes, a fresh random nonce, and a pseudonymous installation fingerprint. These provide continuity and tamper evidence. They do **not** prove authorship or identify physical hardware. A changed fingerprint is a review flag only; resetting or replacing a VM is legitimate and is never automatic misconduct or an automatic point loss.
