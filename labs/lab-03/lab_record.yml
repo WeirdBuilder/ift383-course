@@ -1,24 +1,24 @@
 assignment: lab3
 
 observations:
-  q1: ""
-  q2: ""
+  q1: "different"
+  q2: "no"
 
 guided_tools:
-  selects_files: ""
-  protects_spaced_filenames: ""
-  filters_records: ""
-  transforms_text: ""
+  selects_files: "find"
+  protects_spaced_filenames: "-print0 with xargs -0"
+  filters_records: "grep"
+  transforms_text: "sed"
 
 debugging:
-  caller_directory_defect: ""
-  count_sort_defect: ""
+  caller_directory_defect: "The starter looked for access.log in the caller's directory instead of beside the script."
+  count_sort_defect: "The starter sorted counts in ascending order instead of descending order."
 
 independent:
-  input_line_count: ""
-  first_server_error_row: ""
+  input_line_count: "24"
+  first_server_error_row: "3 203.0.113.13"
 
 quick_check:
-  q1: ""
-  q2: ""
-  q3: ""
+  q1: "B"
+  q2: "B"
+  q3: "24"

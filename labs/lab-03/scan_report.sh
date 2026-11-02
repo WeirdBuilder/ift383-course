@@ -14,19 +14,19 @@ fi
 printf 'TOTAL REQUESTS\n'
 # CORE STUDENT SLOT 1 OF 3
 # Replace the next command with a pipeline that prints one number.
-printf 'STUDENT_SLOT_1\n'
+wc -l < "$input_file"
 
 printf '\nSTATUS COUNTS\n'
 # CORE STUDENT SLOT 2 OF 3
 # Replace the next command with a pipeline that prints "status count" rows.
-printf 'STUDENT_SLOT_2\n'
+awk '{print $9}' "$input_file" | sort -n | uniq -c | awk '{print $2, $1}'
 
 printf '\nTOP 404 API PATHS\n'
 # CORE STUDENT SLOT 3 OF 3
 # Replace the next command with the required field-aware top-five pipeline.
-printf 'STUDENT_SLOT_3\n'
+awk '$9 == 404 && $7 ~ /^\/api\// {print $7}' "$input_file" | sort | uniq -c | sort -k1,1nr -k2,2 | head -n 5 | sed 's/^ *//'
 
 printf '\nSERVER ERROR CLIENTS\n'
 # INDEPENDENT TRANSFER SLOT
 # Replace the next command with your distinct 500-through-599 client pipeline.
-printf 'STUDENT_TRANSFER_SLOT\n'
+awk '$9 >= 500 && $9 <= 599 {print $1}' "$input_file" | sort | uniq -c | sort -k1,1nr -k2,2 | head -n 5 | sed 's/^ *//'
