@@ -3,5 +3,5 @@ Description=IFT 383 Lab 4 safe log-maintenance dry run
 
 [Service]
 Type=oneshot
-WorkingDirectory=/ABSOLUTE/PATH/TO/REPOSITORY/labs/lab-04
-ExecStart=/usr/bin/bash /ABSOLUTE/PATH/TO/REPOSITORY/labs/lab-04/logmaint.sh --dir /ABSOLUTE/PATH/TO/REPOSITORY/labs/lab-04/fixture --days 7 --dry-run
+WorkingDirectory=/home/cameronwlod/ift383-course/labs/lab-04
+ExecStart=/usr/bin/bash /home/cameronwlod/ift383-course/labs/lab-04/logmaint.sh --dir /home/cameronwlod/ift383-course/labs/lab-04/fixture --days 7 --dry-run

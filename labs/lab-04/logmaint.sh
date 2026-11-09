@@ -72,6 +72,7 @@ fi
 
 script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
 run_log="$script_dir/run.log"
+report_file="$script_dir/last_run.json"
 
 # STUDENT JSON REPORT BOUNDARY (Lab 4)
 # After the guided lesson, define report_file beside run_log and write the
@@ -89,12 +90,12 @@ process_path() {
   # The next branch contains the two bounded defects described by the tests.
   # Repair the command invocation and the failure status without changing the
   # shared selector or adding a second selection path.
-  if gzip $path; then
+  if gzip "$path"; then
     printf 'COMPRESSED %s\n' "$path"
     return 0
   else
     printf 'ERROR: compression failed: %s\n' "$path" >&2
-    return 0
+    return 1
   fi
 }
 
@@ -124,6 +125,22 @@ fi
 # STUDENT JSON REPORT BOUNDARY (Lab 4)
 # Write mode, selected, succeeded, failed, and success before exiting.
 # Generate the values from this run; do not hard-code observed output.
+
+if (( final_status == 0 )); then
+	success_json=true
+else
+	success_json=false
+fi
+
+cat > "$report_file" <<EOF
+{
+	"mode": "$mode",
+	"selected": $selected,
+	"succeeded": $succeeded,
+	"failed": $failed,
+	"success": $success_json
+}
+EOF
 
 summary="${timestamp} mode=${mode} dir=${target_dir_absolute} days=${days} selected=${selected} succeeded=${succeeded} failed=${failed} status=${final_status}"
 printf '%s\n' "$summary" | tee -a "$run_log"

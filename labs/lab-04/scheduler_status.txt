@@ -1,0 +1,12 @@
+● lab4-logmaint.timer - IFT 383 Lab 4 near-term user timer
+     Loaded: loaded (/home/cameronwlod/.config/systemd/user/lab4-logmaint.timer; enabled; preset: disabled)
+     Active: active (elapsed) since Sun 2026-11-08 22:48:35 PST; 2min 53s ago
+ Invocation: 7365488fe92a4ad0a7adc4e7e05e0ee1
+    Trigger: n/a
+   Triggers: ● lab4-logmaint.service
+
+Nov 08 22:48:35 fedora.local systemd[2907]: Started lab4-logmaint.timer - IFT 383 Lab 4 near-term user timer.
+Nov 08 22:51:10 fedora.local systemd[2907]: Starting lab4-logmaint.service - IFT 383 Lab 4 safe log-maintenance dry run...
+Nov 08 22:51:10 fedora.local bash[21236]: WOULD_COMPRESS /home/cameronwlod/ift383-course/labs/lab-04/fixture/old-app.log
+Nov 08 22:51:10 fedora.local bash[21236]: WOULD_COMPRESS /home/cameronwlod/ift383-course/labs/lab-04/fixture/old api.log
+Nov 08 22:51:10 fedora.local systemd[2907]: Finished lab4-logmaint.service - IFT 383 Lab 4 safe log-maintenance dry run.

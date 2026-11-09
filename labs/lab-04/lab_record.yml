@@ -1,29 +1,29 @@
 assignment: lab4
 
 observations:
-  q1: ""
-  q2: ""
+  q1: "split-path"
+  q2: "no"
 
 guided_practice:
-  traced_input_path: ""
-  parser_observation: ""
-  selector_observation: ""
-  action_observation: ""
-  json_validation_command: ""
+  traced_input_path: "fixture/old api.log"
+  parser_observation: "target_dir=fixture; days=7; mode=dry-run"
+  selector_observation: "find selects old api.log: ordinary .log file, older than 7 days"
+  action_observation: "dry-run prints WOULD_COMPRESS, returns 0, and leaves the file unchanged"
+  json_validation_command: "python3 -m json.tool last_run.json"
 
 debugging:
-  spaced_path_defect: ""
-  failure_status_defect: ""
+  spaced_path_defect: "gzip used an unquoted path, so a filename with spaces was split into multiple arguments"
+  failure_status_defect: "the failure branch returned 0, so a compression failure was reported as success"
 
 independent:
-  student_test_path: ""
-  student_test_status: ""
-  scheduler_type: ""
-  scheduler_or_fallback_timestamp: ""
-  matching_run_log_timestamp: ""
+  student_test_path: "tests/test_json_report.sh"
+  student_test_status: "0"
+  scheduler_type: "systemd-user"
+  scheduler_or_fallback_timestamp: "Nov 08 22:51:10"
+  matching_run_log_timestamp: "2026-11-08T22:51:10-0800"
 
 quick_check:
-  q1: ""
-  q2: ""
-  q3: ""
-  q4: ""
+  q1: "B"
+  q2: "B"
+  q3: "0"
+  q4: "python3 -m json.tool last_run.json"
