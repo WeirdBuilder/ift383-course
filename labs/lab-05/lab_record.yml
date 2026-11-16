@@ -1,19 +1,19 @@
 assignment: lab5
 # Predictions belong in personal notes and are not submitted or graded.
 observations:
-  q1: ""
-  q2: ""
+  q1: "empty"
+  q2: "unsafe"
 guided:
-  worked_example_command: ""
-  first_failing_check: ""
+  worked_example_command: "/home/cameronwlod/ift383-course/inventory-tool/inventory.py"
+  first_failing_check: "tests/test_lab5_supplied.py::Lab5PublishedTests::Test_directory_argument_is_used_from_another_working_directory"
 debug:
-  directory_argument_repair: ""
-  extensionless_file_repair: ""
+  directory_argument_repair: "scan_directory now uses Path(directory) instead of Path.cwd()"
+  extensionless_file_repair: "extension_for returns an empty string when the path has no suffix"
 independent:
-  command: ""
-  exit_status: ""
-  output_row: ""
+  command: "python3 inventory.py fixtures/base --ext log --min-size 16"
+  exit_status: "0"
+  output_row: "beta.log 16 log"
 quick_check:
-  q1: "" # A, B, C, or D
-  q2: "" # A, B, C, or D
-  q3: "" # numeric record count
+  q1: "A" # A, B, C, or D
+  q2: "C" # A, B, C, or D
+  q3: "4" # numeric record count
